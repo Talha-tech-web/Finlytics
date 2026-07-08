@@ -6,6 +6,8 @@ dashboard, transactions, an AI assistant, wallet (accounts/budgets/goals/recurri
 analytics, reports, and settings. Works fully offline on `localStorage`, with an
 optional Supabase backend for persistence across devices, and an optional Groq-powered
 AI assistant.
+<img width="1912" height="911" alt="image" src="https://github.com/user-attachments/assets/d9bf00b8-1f26-41b2-a7aa-d87b52fd1e27" />
+<img width="1920" height="917" alt="1" src="https://github.com/user-attachments/assets/0d39990d-6467-46a2-98df-048381fd9101" />
 
 ## Project structure
 
@@ -48,16 +50,7 @@ finlytics/
 
 ## Running it locally
 
-Because the app loads data via `fetch`/modules, most browsers block it if you just
-double-click `index.html`. Serve the folder instead:
-
-```bash
-cd finlytics
-python3 -m http.server 8080
-# or: npx serve .
-```
-
-Then open `http://localhost:8080` in your browser.
+double-click `index.html`. 
 
 ## Data storage: localStorage vs Supabase
 

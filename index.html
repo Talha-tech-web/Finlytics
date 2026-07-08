@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard · Finlytics</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body data-page="dashboard">
+
+<div class="app-shell">
+  <div class="sidebar-scrim"></div>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">F</div>
+      <div class="brand-text">
+        <div class="name">Finlytics</div>
+        <div class="sub">Personal Finance</div>
+      </div>
+    </div>
+
+    <nav class="nav-group">
+      <div class="nav-label">Overview</div>
+      <a class="nav-item" data-page="dashboard" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="16" width="7" height="5" rx="2"/></svg>
+        Dashboard
+      </a>
+      <a class="nav-item" data-page="transactions" href="transactions.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+        Transactions
+      </a>
+      <a class="nav-item" data-page="assistant" href="assistant.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.5A8.5 8.5 0 1 1 21 11.5Z"/><circle cx="9" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="15" cy="12" r="1"/></svg>
+        Assistant
+      </a>
+      <a class="nav-item" data-page="wallet" href="wallet.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        Wallet
+      </a>
+      <a class="nav-item" data-page="analytics" href="analytics.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Analytics
+      </a>
+      <a class="nav-item" data-page="reports" href="reports.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+        Reports
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a class="nav-item" data-page="settings" href="settings.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Settings
+      </a>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="icon-btn hamburger" data-hamburger>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="topbar-left">
+          <div class="page-title">Dashboard</div>
+          <div class="page-date" data-clock></div>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <button class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="badge" data-notif-badge>1</span></button>
+        <button class="icon-btn" data-global-mic title="Voice Assistant (hands-free, works on any page)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg></button>
+        <button class="icon-btn" data-theme-toggle><span data-theme-icon></span></button>
+        <a class="btn-ai" href="assistant.html">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.6 5.2L19 9l-5.4 1.8L12 16l-1.6-5.2L5 9l5.4-1.8L12 2z"/></svg>
+          Ask AI
+        </a>
+        <div class="user-chip">
+          <div class="avatar" data-user-initial>A</div>
+          <div class="uname" data-user-name>Talha</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="grid grid-4" style="margin-bottom:18px">
+        <div class="card stat-card">
+          <div class="stat-top"><span class="stat-label">Total Income (6mo)</span><span class="stat-icon pos">↗</span></div>
+          <div class="stat-value text-pos" id="statIncome">Rs 0</div>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-top"><span class="stat-label">Total Expenses (6mo)</span><span class="stat-icon neg">↘</span></div>
+          <div class="stat-value text-neg" id="statExpense">Rs 0</div>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-top"><span class="stat-label">Net Savings</span><span class="stat-icon acc">◈</span></div>
+          <div class="stat-value" id="statNet">Rs 0</div>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-top"><span class="stat-label">Savings Rate</span><span class="stat-icon acc">◎</span></div>
+          <div class="stat-value" id="statSavingsRate">0%</div>
+        </div>
+      </div>
+
+      <div class="grid grid-2" style="margin-bottom:18px">
+        <div class="card">
+          <div class="card-head"><div><div class="card-title">Income vs Expense Trend</div><div class="card-sub">Area chart · last 6 months</div></div></div>
+          <div style="height:260px"><canvas id="trendChart"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><div><div class="card-title">Expenses by Category</div><div class="card-sub">Donut chart</div></div></div>
+          <div style="height:260px"><canvas id="categoryDonut"></canvas></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:18px">
+        <div class="card-head"><div><div class="card-title">Net Worth Trend</div><div class="card-sub">All accounts combined, last 6 months</div></div></div>
+        <div style="height:260px"><canvas id="netWorthChart"></canvas></div>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-head"><div class="card-title">Recent Transactions</div><a class="btn btn-sm" href="transactions.html">View all</a></div>
+          <div id="recentTxnsList"></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><div class="card-title">Top Spending Categories</div></div>
+          <div style="height:200px"><canvas id="topCategoryBar"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><div class="card-title">Goal Progress</div><a class="btn btn-sm" href="wallet.html">Manage</a></div>
+          <div id="duesList"></div>
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top:18px">
+        <div class="card">
+          <div class="card-head"><div class="card-title">Budget Health</div><div class="card-sub">Current month</div></div>
+          <div id="budgetHealthList"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/store.js"></script>
+<script src="js/sync.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/charts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="js/assistant-nlu.js"></script>
+<script src="js/assistant-import.js"></script>
+<script src="js/assistant-persist.js"></script>
+<script src="js/chat-cleanup.js"></script>
+<script src="js/assistant.js"></script>
+<script src="js/voice-engine.js"></script>
+<script src="js/voice-popup.js"></script>
+<script src="js/dashboard.js"></script>
+<script>document.addEventListener("DOMContentLoaded", Theme.init);</script>
+</body>
+</html>

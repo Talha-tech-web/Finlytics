@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings · Finlytics</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body data-page="settings">
+
+<div class="app-shell">
+  <div class="sidebar-scrim"></div>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">F</div>
+      <div class="brand-text">
+        <div class="name">Finlytics</div>
+        <div class="sub">Personal Finance</div>
+      </div>
+    </div>
+
+    <nav class="nav-group">
+      <div class="nav-label">Overview</div>
+      <a class="nav-item" data-page="dashboard" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="16" width="7" height="5" rx="2"/></svg>
+        Dashboard
+      </a>
+      <a class="nav-item" data-page="transactions" href="transactions.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+        Transactions
+      </a>
+      <a class="nav-item" data-page="assistant" href="assistant.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.5A8.5 8.5 0 1 1 21 11.5Z"/><circle cx="9" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="15" cy="12" r="1"/></svg>
+        Assistant
+      </a>
+      <a class="nav-item" data-page="wallet" href="wallet.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        Wallet
+      </a>
+      <a class="nav-item" data-page="analytics" href="analytics.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Analytics
+      </a>
+      <a class="nav-item" data-page="reports" href="reports.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+        Reports
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a class="nav-item" data-page="settings" href="settings.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Settings
+      </a>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="icon-btn hamburger" data-hamburger>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="topbar-left">
+          <div class="page-title">Settings</div>
+          <div class="page-date" data-clock></div>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <button class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="badge" data-notif-badge>1</span></button>
+        <button class="icon-btn" data-global-mic title="Voice Assistant (hands-free, works on any page)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg></button>
+        <button class="icon-btn" data-theme-toggle><span data-theme-icon></span></button>
+        <a class="btn-ai" href="assistant.html">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.6 5.2L19 9l-5.4 1.8L12 16l-1.6-5.2L5 9l5.4-1.8L12 2z"/></svg>
+          Ask AI
+        </a>
+        <div class="user-chip">
+          <div class="avatar" data-user-initial>A</div>
+          <div class="uname" data-user-name>Talha</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <!-- Row 1: Profile + Appearance -->
+      <div class="grid grid-2-even" style="align-items:stretch;gap:18px;margin-bottom:18px">
+
+        <!-- Profile -->
+        <div class="card">
+          <div class="card-head"><div><div class="card-title">Profile</div><div class="card-sub">How Finlytics identifies you</div></div></div>
+          <form id="profileForm">
+            <div class="field">
+              <label>Business / Display Name</label>
+              <input type="text" id="businessName" placeholder="e.g. Talha">
+            </div>
+            <button class="btn btn-primary" type="submit" id="saveProfileBtn">Save Profile</button>
+          </form>
+        </div>
+
+        <!-- Appearance -->
+        <div class="card">
+          <div class="card-head"><div><div class="card-title">Appearance</div><div class="card-sub">Theme and display preferences</div></div></div>
+          <div class="field">
+            <label>Theme</label>
+            <div class="theme-picker" id="themePicker" role="group" aria-label="Theme">
+              <button type="button" class="theme-picker-btn" data-theme-value="light">Light</button>
+              <button type="button" class="theme-picker-btn" data-theme-value="dark">Dark</button>
+              <button type="button" class="theme-picker-btn" data-theme-value="system">System</button>
+            </div>
+          </div>
+          <div class="field" style="margin-bottom:0">
+            <label>Font Size</label>
+            <select id="fontSizeSelect">
+              <option value="small">Small (13px)</option>
+              <option value="normal">Normal (15px)</option>
+              <option value="large">Large (17px)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: AI Assistant + Notifications -->
+      <div class="grid grid-2-even" style="align-items:stretch;gap:18px;margin-bottom:18px">
+
+        <!-- AI Assistant -->
+        <div class="card settings-panel-card">
+          <div class="settings-panel settings-panel--center">
+            <div class="settings-panel-head">
+              <div class="card-title">AI Assistant</div>
+              <div class="card-sub">Manage the built-in AI &amp; voice features</div>
+            </div>
+            <div class="settings-panel-body">
+              <div class="field">
+                <label>AI Assistant</label>
+                <select id="aiSelect">
+                  <option value="true">Enabled</option>
+                  <option value="false">Disabled</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Voice Input</label>
+                <select id="voiceSelect">
+                  <option value="true">Enabled</option>
+                  <option value="false">Disabled</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Show Generated SQL</label>
+                <select id="showSqlSelect">
+                  <option value="false">Hidden</option>
+                  <option value="true">Visible</option>
+                </select>
+              </div>
+              <div class="field" style="margin-bottom:0">
+                <label>Default Language</label>
+                <select id="langSelect">
+                  <option value="en">English</option>
+                  <option value="ur">Urdu (اردو)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preferences & Management -->
+        <div class="card" style="display:flex;flex-direction:column;height:100%;min-height:330px">
+          <div>
+            <div class="card-head"><div><div class="card-title">Preferences &amp; Management</div><div class="card-sub">Manage alerts, assistant settings, and application preferences</div></div></div>
+            <div class="field">
+              <label>Notifications</label>
+              <select id="notifSelect">
+                <option value="true">Enabled</option>
+                <option value="false">Disabled</option>
+              </select>
+            </div>
+            <div class="sett-group" id="notifSubOptions">
+              <div class="field">
+                <label>Payment Due Reminder</label>
+                <select id="paymentReminderSelect">
+                  <option value="true">On</option>
+                  <option value="false">Off</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Low Balance Alert</label>
+                <select id="lowBalanceSelect">
+                  <option value="true">On</option>
+                  <option value="false">Off</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="sett-group" style="margin-top:18px;padding-top:18px;border-top:1px solid var(--border)">
+              <div class="card-title" style="font-size:14px;margin-bottom:4px">Chat History Management</div>
+              <div class="card-sub" style="margin-bottom:10px">Manage your saved AI Assistant conversations.</div>
+              <p id="chatHistoryCount" style="font-size:12.5px;color:var(--ink-dim);margin-bottom:10px">Loading…</p>
+              <p style="font-size:12px;color:var(--ink-faint);margin-bottom:12px;line-height:1.5">Remove all saved AI Assistant conversations and generated chat data permanently.</p>
+              <button class="btn btn-danger" type="button" id="deleteChatHistoryBtn">Delete All Chat History</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Row 3: AI Integration (Full-width) -->
+      <div class="card" style="margin-bottom:18px">
+        <div class="card-head"><div><div class="card-title">AI Integration</div><div class="card-sub">Advanced natural-language AI capabilities</div></div></div>
+        <div class="field" style="margin-bottom:0">
+          <label>AI API Key <span style="color:var(--ink-dim);font-weight:400">(optional — enables advanced natural-language AI replies beyond the built-in finance engine)</span></label>
+          <div style="display:flex;gap:8px">
+            <input type="password" id="aiKeyInput" placeholder="Enter your API key..." autocomplete="off" style="flex:1">
+            <button class="btn btn-sm" type="button" id="aiKeyToggle" style="white-space:nowrap">Show</button>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:8px">
+            <button class="btn btn-sm" type="button" id="aiKeyTestBtn">Save &amp; Test</button>
+            <button class="btn btn-sm" type="button" id="aiKeyClearBtn">Clear</button>
+            <span id="aiKeyStatus" style="font-size:12.5px;color:var(--ink-dim)"></span>
+          </div>
+          <div style="font-size:11.5px;color:var(--ink-dim);margin-top:8px">Your API key is stored only in this browser — it is never saved to a file or shared. Without a key, the assistant still fully answers all budget, spending, and goal questions instantly using the built-in local engine.</div>
+        </div>
+      </div>
+
+      <!-- Row 4: Data Management (full-width) -->
+      <div class="card" style="margin-bottom:18px">
+        <div class="card-head"><div><div class="card-title">Data Management</div><div class="card-sub">Export your data or reset the app</div></div></div>
+        <div class="grid grid-2-even" style="gap:14px">
+
+          <div class="card" style="background:var(--bg-elevated)">
+            <div class="card-title" style="font-size:14px;margin-bottom:6px">Export Data</div>
+            <div class="card-sub" style="margin-bottom:14px">Download a copy of your financial records.</div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <button class="btn btn-block" id="exportCsvBtn" style="flex:1">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Export CSV
+              </button>
+              <button class="btn btn-block" id="exportPdfBtn" style="flex:1">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Export PDF
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-2-even" style="gap:14px">
+            <div class="card" style="background:var(--bg-elevated)">
+              <div class="card-title" style="font-size:14px">Reset transactions only</div>
+              <div class="card-sub" id="txnCountLabel" style="margin:6px 0 14px"></div>
+              <button class="btn btn-block" id="resetTxnsBtn">Reset Transactions</button>
+            </div>
+            <div class="card" style="border-color:var(--negative)">
+              <div class="card-title text-neg" style="font-size:14px">Reset everything</div>
+              <div class="card-sub" style="margin:6px 0 14px">Wipes all data. Cannot be undone.</div>
+              <button class="btn btn-danger btn-block" id="resetAllBtn">Reset Everything</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p style="text-align:center;color:var(--ink-faint);font-size:12.5px;margin-top:10px">Finlytics v1.0.0 · Your finances, your data, your control.</p>
+    </main>
+  </div>
+</div>
+
+<div class="modal-overlay" id="deleteChatModal">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 style="font-size:16px;font-weight:700">Delete All Chat History</h3>
+      <button class="modal-close" type="button" data-close-delete-chat>&times;</button>
+    </div>
+    <p style="font-size:14px;color:var(--ink-dim);line-height:1.55;margin-bottom:20px">Are you sure you want to delete all chat history? This action cannot be undone.</p>
+    <div style="display:flex;gap:10px">
+      <button class="btn btn-block" type="button" data-close-delete-chat>Cancel</button>
+      <button class="btn btn-danger btn-block" type="button" id="confirmDeleteChatBtn">Delete All Chats</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/store.js"></script>
+<script src="js/sync.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/charts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="js/assistant-nlu.js"></script>
+<script src="js/assistant-import.js"></script>
+<script src="js/assistant-persist.js"></script>
+<script src="js/chat-cleanup.js"></script>
+<script src="js/assistant.js"></script>
+<script src="js/voice-engine.js"></script>
+<script src="js/voice-popup.js"></script>
+<script src="js/settings.js"></script>
+<script>document.addEventListener("DOMContentLoaded", Theme.init);</script>
+</body>
+</html>

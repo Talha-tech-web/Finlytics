@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Finlytics — Personal Finance Dashboard
 
 A single-user, multi-page finance app built in plain HTML, CSS, and JavaScript —
@@ -10,6 +10,7 @@ AI assistant.
 <img width="1920" height="917" alt="1" src="https://github.com/user-attachments/assets/0d39990d-6467-46a2-98df-048381fd9101" />
 
 ## Project structure
+<img width="2720" height="1200" alt="1 (2)" src="https://github.com/user-attachments/assets/05a06da7-1d1e-4bd5-b211-80562ab27551" />
 
 ```
 finlytics/
@@ -47,6 +48,7 @@ finlytics/
     └── schema.sql        Canonical Supabase/Postgres schema (accounts, transactions,
                            budgets, goals, recurring_items, saved_reports)
 ```
+<img width="2720" height="1840" alt="1 (1)" src="https://github.com/user-attachments/assets/2234741d-024e-4e1b-92d0-0ede38589f45" />
 
 ## Running it locally
 

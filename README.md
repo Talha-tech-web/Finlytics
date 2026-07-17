@@ -6,6 +6,9 @@ dashboard, transactions, an AI assistant, wallet (accounts/budgets/goals/recurri
 analytics, reports, and settings. Works fully offline on `localStorage`, with an
 optional Supabase backend for persistence across devices, and an optional Groq-powered
 AI assistant.
+
+LIVE DEMO : https://talha-tech-web.github.io/Finlytics/
+
 <img width="1912" height="911" alt="image" src="https://github.com/user-attachments/assets/d9bf00b8-1f26-41b2-a7aa-d87b52fd1e27" />
 <img width="1920" height="917" alt="1" src="https://github.com/user-attachments/assets/0d39990d-6467-46a2-98df-048381fd9101" />
 
